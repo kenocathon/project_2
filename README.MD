@@ -15,4 +15,4 @@
 - Use git.clone to copy the repository to your local machine.
 - Using the terminal navigate to the directory containing the site and use **npm.install** command. All modules and dependencies are listed in the package.json file and will be installed automatically with that command.
 - Check all links and src locations to make sure they are correct in the index.html.
-- Do not make any changes to the style.css file. All changes should be made in the .scss files and compiled to .css. You can run the script by using **npm run sass** as a command. This will watch all .scss files and compile when saved recursively.
+- Do not make any changes to the style.css file. All changes should be made in the .scss files and compiled to .css. You can run the script by using **npm run sass** as a command. This will watch all .scss files and compile to .css recursively.
