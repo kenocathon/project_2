@@ -1,0 +1,44 @@
+@use 'variables';
+
+@mixin border-radius($size) {
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  -ms-border-radius: $size;
+  border-radius: $size;
+}
+@mixin flexbox-display {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+@mixin xs-screen {
+  @media only screen and (max-width: map-get($breakpoints , x-small )) {
+    @content;
+  }
+}
+@mixin small-screen {
+  @media only screen and (max-width: map-get($breakpoints , small )) {
+    @content;
+  }
+}
+@mixin medium-screen {
+  @media only screen and (max-width: map-get($breakpoints , medium )) {
+    @content;
+  }
+}
+@mixin large-screen {
+  @media only screen and (min-width: map-get($breakpoints, medium )) {
+    @content;
+  }
+}

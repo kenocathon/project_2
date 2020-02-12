@@ -1,0 +1,17 @@
+// Color Variables
+$blue-color: #275dad;
+$dark-color: #5b616a;
+$light-color: #fcf7f8;
+
+// Font Variables
+$logo-font: "Sriracha", cursive;
+$heading-font: "Roboto Slab", serif;
+$text-font: "Playfair Display", serif;
+
+// screen breakpoints
+$breakpoints: (
+  x-small: 414px,
+  small: 768px,
+  medium: 1440px,
+  large: 1920px
+);
