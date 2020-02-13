@@ -5,8 +5,20 @@
 ***************************/
 header {
   background-color: $blue-color;
+  @include flex-display;
+  @include small-screen-and-above {
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 10%;
+  }
+  @include small-screen-and-below {
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+  }
 }
 
 .logo {
   color: $light-color;
+  font-family: $logo-font;
 }

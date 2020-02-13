@@ -368,19 +368,39 @@ textarea {
 ******** BASE STYLES *******
 ***************************/
 header {
-  background-color: #275dad; }
+  background-color: #275dad;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+  @media only screen and (min-width: 768px) {
+    header {
+      justify-content: space-between;
+      align-items: center;
+      padding: 3em 10%; } }
+  @media only screen and (max-width: 768px) {
+    header {
+      justify-content: center;
+      align-items: center;
+      height: 10em; } }
 
 .logo {
-  color: #fcf7f8; }
+  color: #fcf7f8;
+  font-family: "Sriracha", cursive; }
 
 /*************************************
 *********  NAVIGATION ****************
 *************************************/
 @media only screen and (max-width: 768px) {
-  nav {
-    height: 3em; }
-    nav ul {
-      display: none; } }
+  nav ul {
+    display: none; }
+  .line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    color: #fcf7f8;
+    z-index: 2; } }
 
 @media only screen and (min-width: 768px) {
   nav ul {
@@ -388,7 +408,9 @@ header {
     margin: 0;
     padding: 0; }
     nav ul li {
-      color: #fcf7f8; } }
+      color: #fcf7f8;
+      display: inline-block;
+      padding: 0 2em; } }
 
 /******************************
 ******** Page Layout **********

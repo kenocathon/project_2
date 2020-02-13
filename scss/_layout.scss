@@ -2,7 +2,7 @@
 ******** Page Layout **********
 ******************************/
 @mixin xs-screen {
-  body {
-    display: flex;
-  }
+}
+
+@mixin small-and-above {
 }

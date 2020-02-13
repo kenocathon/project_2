@@ -7,10 +7,16 @@
 
 @include small-screen-and-below {
   nav {
-    height: 3em;
     ul {
       display: none;
     }
+  }
+  .line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    color: $light-color;
+    z-index: 2;
   }
 }
 
@@ -23,6 +29,8 @@
 
       li {
         color: $light-color;
+        display: inline-block;
+        padding: 0 2em;
       }
     }
   }
