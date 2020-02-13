@@ -11,15 +11,20 @@
       display: none;
     }
   }
-  .line {
-    width: 28px;
-    height: 3px;
-    margin: 0 0 5px 0;
-    color: $light-color;
-    z-index: 2;
+  .hamburger {
+    position: absolute;
+    z-index: 3;
+    right: 1em;
+    top: 1em;
+
+    .line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: $light-color;
+    }
   }
 }
-
 @include small-screen-and-above {
   nav {
     ul {

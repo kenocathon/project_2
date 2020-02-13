@@ -395,12 +395,16 @@ header {
 @media only screen and (max-width: 768px) {
   nav ul {
     display: none; }
-  .line {
-    width: 28px;
-    height: 3px;
-    margin: 0 0 5px 0;
-    color: #fcf7f8;
-    z-index: 2; } }
+  .hamburger {
+    position: absolute;
+    z-index: 3;
+    right: 1em;
+    top: 1em; }
+    .hamburger .line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: #fcf7f8; } }
 
 @media only screen and (min-width: 768px) {
   nav ul {
