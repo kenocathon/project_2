@@ -1,0 +1,29 @@
+@import "variables";
+@import "mixins";
+
+/*************************************
+*********  NAVIGATION ****************
+*************************************/
+
+@include small-screen-and-below {
+  nav {
+    height: 3em;
+    ul {
+      display: none;
+    }
+  }
+}
+
+@include small-screen-and-above {
+  nav {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        color: $light-color;
+      }
+    }
+  }
+}

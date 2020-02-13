@@ -363,3 +363,33 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */ }
+
+/***************************
+******** BASE STYLES *******
+***************************/
+header {
+  background-color: #275dad; }
+
+.logo {
+  color: #fcf7f8; }
+
+/*************************************
+*********  NAVIGATION ****************
+*************************************/
+@media only screen and (max-width: 768px) {
+  nav {
+    height: 3em; }
+    nav ul {
+      display: none; } }
+
+@media only screen and (min-width: 768px) {
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      color: #fcf7f8; } }
+
+/******************************
+******** Page Layout **********
+******************************/

@@ -1,0 +1,12 @@
+@import "mixins";
+
+/***************************
+******** BASE STYLES *******
+***************************/
+header {
+  background-color: $blue-color;
+}
+
+.logo {
+  color: $light-color;
+}

@@ -1,4 +1,4 @@
-@use 'variables';
+@import "variables";
 
 @mixin border-radius($size) {
   -webkit-border-radius: $size;
@@ -6,6 +6,8 @@
   -ms-border-radius: $size;
   border-radius: $size;
 }
+
+// Flex mixins
 @mixin flexbox-display {
   display: -webkit-box;
   display: -moz-box;
@@ -22,23 +24,46 @@
   flex: $values;
 }
 
-@mixin xs-screen {
-  @media only screen and (max-width: map-get($breakpoints , x-small )) {
+//Grid Mixins
+
+@mixin grid-display {
+  display: grid;
+  display: -webkit-box;
+  display: -ms-grid;
+}
+
+@mixin grid($columns, $rows) {
+  grid-template-columns: $columns;
+  gird-template-rows: $rows;
+}
+
+@mixin xs-screen-only {
+  @media only screen and (max-width: ( $x-small )) {
     @content;
   }
 }
-@mixin small-screen {
-  @media only screen and (max-width: map-get($breakpoints , small )) {
+@mixin small-screen-and-below {
+  @media only screen and (max-width: ( $small )) {
     @content;
   }
 }
-@mixin medium-screen {
-  @media only screen and (max-width: map-get($breakpoints , medium )) {
+@mixin small-screen-and-above {
+  @media only screen and (min-width: ( $small )) {
     @content;
   }
 }
-@mixin large-screen {
-  @media only screen and (min-width: map-get($breakpoints, medium )) {
+@mixin medium-screen-and-below {
+  @media only screen and (max-width: ($medium )) {
+    @content;
+  }
+}
+@mixin medium-screen-and-above {
+  @media only screen and (min-width: ($medium )) {
+    @content;
+  }
+}
+@mixin large-screen-only {
+  @media only screen and (min-width: ($medium )) {
     @content;
   }
 }
