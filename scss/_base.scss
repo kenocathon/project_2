@@ -5,20 +5,27 @@
 ***************************/
 header {
   background-color: $blue-color;
-  @include flex-display;
-  @include small-screen-and-above {
-    justify-content: space-between;
-    align-items: center;
-    padding: 3em 10%;
-  }
-  @include small-screen-and-below {
-    justify-content: center;
-    align-items: center;
-    height: 10em;
-  }
 }
 
 .logo {
   color: $light-color;
   font-family: $logo-font;
+}
+
+form {
+  .search-field input {
+    background-color: white;
+  }
+}
+main {
+  background-color: $light-color;
+}
+.content-section {
+  h3,
+  h4 {
+    margin: 0.25em 0;
+  }
+  img {
+    margin-bottom: 2em;
+  }
 }

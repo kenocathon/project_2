@@ -24,46 +24,36 @@
   flex: $values;
 }
 
-//Grid Mixins
-
-@mixin grid-display {
-  display: grid;
-  display: -webkit-box;
-  display: -ms-grid;
-}
-
-@mixin grid($columns, $rows) {
-  grid-template-columns: $columns;
-  gird-template-rows: $rows;
-}
+//Screen Sizes
 
 @mixin xs-screen-only {
-  @media only screen and (max-width: ( $x-small )) {
+  @media only screen and (max-width: $x-small) {
     @content;
   }
 }
 @mixin small-screen-and-below {
-  @media only screen and (max-width: ( $small )) {
+  @media only screen and (max-width: $small) {
     @content;
   }
 }
 @mixin small-screen-and-above {
-  @media only screen and (min-width: ( $small )) {
+  @media only screen and (min-width: $small) {
     @content;
   }
 }
 @mixin medium-screen-and-below {
-  @media only screen and (max-width: ($medium )) {
+  @media only screen and (max-width: $medium) {
     @content;
   }
 }
 @mixin medium-screen-and-above {
-  @media only screen and (min-width: ($medium )) {
+  @media only screen and (min-width: $medium) {
     @content;
   }
 }
+
 @mixin large-screen-only {
-  @media only screen and (min-width: ($medium )) {
+  @media only screen and (min-width: $medium) {
     @content;
   }
 }
