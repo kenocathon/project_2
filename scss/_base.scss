@@ -7,25 +7,71 @@ header {
   background-color: $blue-color;
 }
 
+.hamburger {
+  cursor: pointer;
+}
+
 .logo {
   color: $light-color;
   font-family: $logo-font;
 }
 
 form {
-  .search-field input {
-    background-color: white;
+  .search-field {
+    input {
+      background-color: white;
+      width: 100%;
+      margin: 0.8em;
+      padding: 0.4em 0.3em;
+      background-color: #fcf7f8;
+      @include border-radius(0.8em);
+    }
+    label {
+      font-family: $heading-font;
+      font-size: 1.4em;
+    }
   }
 }
+.search-form-btn {
+  button {
+    width: 15rem;
+    padding: 0.5em;
+    @include border-radius(1em);
+    background-color: lighten($dark-color, 30%);
+    cursor: pointer;
+    &:hover {
+      color: $light-color;
+    }
+  }
+}
+
 main {
   background-color: $light-color;
 }
 .content-section {
+  background-color: lighten($dark-color, 50%);
+  h2 {
+    margin: 2em 0;
+  }
   h3,
   h4 {
     margin: 0.25em 0;
   }
   img {
     margin-bottom: 2em;
+    cursor: pointer;
   }
+}
+h2 {
+  color: $dark-color;
+  font-size: 2em;
+}
+h3 {
+  font-family: $text-font;
+}
+.alert {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
 }

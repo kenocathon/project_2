@@ -7,6 +7,11 @@
   border-radius: $size;
 }
 
+//transition
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
 // Flex mixins
 @mixin flex-display {
   display: -webkit-box;

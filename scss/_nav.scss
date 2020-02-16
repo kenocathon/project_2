@@ -6,10 +6,8 @@
 *************************************/
 
 @include small-screen-and-below {
-  nav {
-    ul {
-      display: none;
-    }
+  .nav-links {
+    display: none;
   }
   .hamburger {
     position: absolute;
@@ -22,6 +20,25 @@
       height: 3px;
       margin: 0 0 5px 0;
       background-color: $light-color;
+      @include easeOut;
+    }
+
+    &.close {
+      transform: rotate(180deg);
+
+      .line {
+        //Line 1 and 3 rotate
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(10px, 2px);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, 5px);
+        }
+        // Hide line 2
+        &:nth-child(2) {
+          display: none;
+        }
+      }
     }
   }
 }
