@@ -86,4 +86,22 @@ $(document).ready(function() {
       );
     }
   });
+
+  $(".containimg img").on("click", function() {
+    var politician = $(this).attr("alt");
+    var gifNumber = 30;
+
+    $.get(
+      `${gifUrl}?q=${politician}&api_key=${apiKey}&limit=${gifNumber}`,
+      function(data) {
+        var dataArray = data.data;
+        dataArray.forEach(i => {
+          img = i.images.downsized.url;
+          $(".dynamic-section").append(
+            `<div class= "dynamic-content"><img class= "dynamic-image"  src=${img}></img></div>`
+          );
+        });
+      }
+    );
+  });
 });
