@@ -23,10 +23,6 @@ $(document).ready(function() {
     }
   });
 
-  // API Call and Dynamic content
-  var apiKey = "v7ZdwUQBtCE7hSPMv2gXAcronWNGEISv";
-  var gifUrl = "http://api.giphy.com/v1/gifs/search";
-
   //When search button is clicked call api and return images
   $(".search-form-btn > button").on("click", function() {
     //prevent page reload
@@ -36,6 +32,8 @@ $(document).ready(function() {
     $(".dynamic-section").empty();
 
     //set variable values
+    var apiKey = "v7ZdwUQBtCE7hSPMv2gXAcronWNGEISv";
+    var gifUrl = "https://api.giphy.com/v1/gifs/search";
     var politician = $("#politician").val();
     var gifNumber = $("#gif-number").val();
     var $warning = $("#alert");
