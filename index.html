@@ -31,20 +31,33 @@
     <main>
       <section class="top-section">
         <form>
+          <div id="alert" class="alert form-grid-0"></div>
           <h2 class="form-grid-1">Search Politicians</h2>
           <div class="search-field form-grid-2">
-            <label for="politician-name">Politician Name</label>
-            <input type="text" name="politician-name" required="required" />
+            <label for="politician-name">Politician Name:</label>
+            <input
+              id="politician"
+              type="text"
+              name="politician-name"
+              required="required"
+            />
           </div>
           <div class="search-field form-grid-3">
-            <label for="politician-name">No. of Gifs</label>
-            <input type="text" name="politician-name" required="required" />
+            <label for="number-gif">No. of Gifs:</label>
+            <input
+              id="gif-number"
+              type="number"
+              max="30"
+              name="number-gif"
+              required="required"
+            />
           </div>
           <div class="search-form-btn form-grid-4">
             <button type="submit">Search</button>
           </div>
         </form>
       </section>
+      <section class="dynamic-section"></section>
       <section class="content-section">
         <h2 class="grid-heading">Most Searched</h2>
         <div class="content-group">
@@ -106,7 +119,6 @@
       </section>
     </main>
     <footer></footer>
-
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/main.js"></script>
   </body>
