@@ -88,8 +88,10 @@ $(document).ready(function() {
   });
 
   $(".containimg img").on("click", function() {
+    $(".dynamic-section").empty();
     var politician = $(this).attr("alt");
     var gifNumber = 30;
+    window.scrollTo(0, 500);
 
     $.get(
       `${gifUrl}?q=${politician}&api_key=${apiKey}&limit=${gifNumber}`,
