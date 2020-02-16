@@ -22,6 +22,7 @@ $(document).ready(function() {
       showMenu = false;
     }
   });
+
   var apiKey = "v7ZdwUQBtCE7hSPMv2gXAcronWNGEISv";
   var gifUrl = "https://api.giphy.com/v1/gifs/search";
 
@@ -40,28 +41,29 @@ $(document).ready(function() {
     var $warning = $("#alert");
 
     function checkInput() {
-      if (gifNumber > 30) {
-        $warning.html("<p>Only 30 images can be shown at once.");
-        $warning.removeClass("alert");
-        $warning.addClass("show");
-        return false;
-
-        return true;
-      } else if (politician === " " || gifNumber === " ") {
-        $warning.html(
-          "<p>You must enter a politcian's name and a number of gifs to show</p>"
-        );
-        $warning.removeClass("alert");
-        $warning.addClass("show");
-        return false;
-      } else if (!politician.match(/^[0-9a-zA-Z]+$/)) {
-        $warning.html("<p>Stop trying to hack my site please!</p>");
-        $warning.removeClass("alert");
-        $warning.addClass("show");
-        return false;
-      } else {
-        $warning.removeClass("show");
-        $warning.addClass("alert");
+      var badCharacters = ["$", "%", "&", "*", "(", ")"];
+      for (i = 0; i < politician.length; i++) {
+        if (politician.includes(badCharacters[i])) {
+          $warning.html("<p>Stop trying to hack my site please!</p>");
+          $warning.removeClass("alert");
+          $warning.addClass("show");
+          return false;
+        } else if (gifNumber > 30) {
+          $warning.html("<p>Only 30 images can be shown at once.");
+          $warning.removeClass("alert");
+          $warning.addClass("show");
+          return false;
+        } else if (politician === " " || gifNumber === " ") {
+          $warning.html(
+            "<p>You must enter a politcian's name and a number of gifs to show</p>"
+          );
+          $warning.removeClass("alert");
+          $warning.addClass("show");
+          return false;
+        } else {
+          $warning.removeClass("show");
+          $warning.addClass("alert");
+        }
       }
     }
 
